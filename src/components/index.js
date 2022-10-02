@@ -8,3 +8,4 @@ export { default as WhyPaketus } from "./WyhPaketus";
 export { default as Welcome } from "./Welcome";
 export { default as SendUs } from "./SendUs";
 export { default as FirstThreeMonths } from "./FirstThreeMonths";
+export { default as Section } from "./Section";

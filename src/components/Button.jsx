@@ -1,5 +1,6 @@
 import Icon from "./Icon.jsx";
 import { Label } from "./index.js";
+import { scrollTo } from "../utils";
 
 const Button = ({
   children,
@@ -7,6 +8,10 @@ const Button = ({
   leftIcon,
   rightIcon,
   purpose = "orange",
+  toId,
+  toRef,
+  duration,
+  scrollMode,
   className,
 }) => {
   const leftIconElement = {
@@ -28,8 +33,13 @@ const Button = ({
       "bg-secondary hover:bg-secondarySoft rounded px-8 py-3 text-white font-bold cursor-pointer text-center",
   };
 
+  const scroll = () => scrollTo({ id: toId, ref: toRef, duration });
+
   return (
-    <div className={className ?? containerClassName[purpose]} onClick={onClick}>
+    <div
+      className={className ?? containerClassName[purpose]}
+      onClick={scrollMode ? scroll : onClick}
+    >
       <Icon {...leftIconElement} />
       <Label>{children}</Label>
       <Icon {...rightIconElement} />
