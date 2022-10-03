@@ -6,8 +6,8 @@ module.exports = {
       screens: {
         bigTablet: { max: "1200px", min: "1001px" },
         mediumTablet: { max: "1000px", min: "769px" },
-        tablet: { max: "768px", min: "461px" },
-        phone: { max: "460px", min: "0px" },
+        tablet: { max: "768px", min: "480px" },
+        phone: { max: "479px", min: "0px" },
       },
       colors: {
         footer:'#1F2736',

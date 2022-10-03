@@ -9,8 +9,14 @@ const Welcome = () => {
       bg-cover bg-center bg-background bg-cover bg-no-repeat bg-top    "
     >
       <Container medium>
-        <div className="flex items-center justify-center columns-2  py-12 gap-3">
-          <div className="flex flex-col w-full h-full items-center justify-center gap-4">
+        <div
+          className="
+        flex items-center justify-center columns-2  py-12 gap-3
+        phone:columns-1 phone:flex-col
+
+        "
+        >
+          <div className="flex flex-col w-full h-full items-center justify-center gap-4 ">
             <Label className="text-white text-[36px] text-center font-bold ">
               Turkiyenin en yeni Yemek Siparişi ve Müşteri Sadakati Uygulaması
               ilk olarak İzmirde
@@ -29,7 +35,7 @@ const Welcome = () => {
                 /images/phone/phone.png 1221w"
             />
 
-            <div className="flex gap-6">
+            <div className="flex gap-6 items-center">
               <a
                 href="https://apps.apple.com/tr/app/paketus/id1459438549?l=tr"
                 target={"_blank"}
@@ -39,11 +45,15 @@ const Welcome = () => {
               </a>
 
               <a
-                href="https://play.google.com/store/apps/details?id=com.paketus&hl=tr"
+                href="https://play.google.com/store/apps/details?id=com.paketus&hl=tr&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
                 target={"_blank"}
                 rel={"noreferrer, noopener"}
               >
-                <Icon purpose="play-store" width={120} />
+                <img
+                  className="w-[130px] h-[45px]"
+                  alt="Google Play'den alın"
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png"
+                />
               </a>
             </div>
           </div>

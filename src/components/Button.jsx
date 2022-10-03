@@ -1,6 +1,7 @@
 import Icon from "./Icon.jsx";
 import { Label } from "./index.js";
 import { scrollTo } from "../utils";
+import clsx from "clsx";
 
 const Button = ({
   children,
@@ -13,6 +14,7 @@ const Button = ({
   duration,
   scrollMode,
   className,
+  disabled,
 }) => {
   const leftIconElement = {
     purpose: typeof leftIcon === "object" ? leftIcon.purpose : leftIcon,
@@ -29,8 +31,12 @@ const Button = ({
   };
 
   const containerClassName = {
-    orange:
+    orange: clsx(
       "bg-secondary hover:bg-secondarySoft rounded px-8 py-3 text-white font-bold cursor-pointer text-center",
+      {
+        "opacity-50 cursor-not-allowed hover:": disabled,
+      }
+    ),
   };
 
   const scroll = () => scrollTo({ id: toId, ref: toRef, duration });
@@ -38,7 +44,7 @@ const Button = ({
   return (
     <div
       className={className ?? containerClassName[purpose]}
-      onClick={scrollMode ? scroll : onClick}
+      onClick={disabled ? null : scrollMode ? scroll : onClick}
     >
       <Icon {...leftIconElement} />
       <Label>{children}</Label>

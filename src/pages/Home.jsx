@@ -4,10 +4,8 @@ const Home = () => {
   return (
     <div className="w-full h-fit">
       <Welcome />
-      <div>
-        <FirstThreeMonths />
-        <WhyPaketus />
-      </div>
+      <FirstThreeMonths />
+      <WhyPaketus />
     </div>
   );
 };

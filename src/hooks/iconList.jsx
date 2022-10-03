@@ -1,7 +1,6 @@
 import React from "react";
 import { ReactComponent as Logo } from "../assets/logo.svg";
 import { ReactComponent as AppStore } from "../assets/icons/apple.svg";
-import { ReactComponent as PlayStore } from "../assets/icons/google.svg";
 import { ReactComponent as GoodOneWin } from "../assets/icons/wyh-paketus/GoodOneWin.svg";
 import { ReactComponent as Messages } from "../assets/icons/wyh-paketus/Messages.svg";
 import { ReactComponent as NoIncrease } from "../assets/icons/wyh-paketus/NoIncrease.svg";
@@ -10,6 +9,7 @@ import { ReactComponent as Point } from "../assets/icons/wyh-paketus/Point.svg";
 import { ReactComponent as Rating } from "../assets/icons/wyh-paketus/Rating.svg";
 import { ReactComponent as TakeControl } from "../assets/icons/wyh-paketus/TakeControl.svg";
 import { ReactComponent as Touch } from "../assets/icons/wyh-paketus/Touch.svg";
+import { ReactComponent as Image2 } from "../assets/icons/Image2.svg";
 const iconList = (purpose, { width, height, color }) => {
   switch (purpose) {
     case "logo":
@@ -18,6 +18,8 @@ const iconList = (purpose, { width, height, color }) => {
       return <AppStore />;
     case "play-store":
       return <PlayStore />;
+    case "upload":
+      return <Image2 />;
 
     // Why Paketus
     case "good-one-win":

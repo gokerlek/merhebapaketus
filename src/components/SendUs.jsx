@@ -1,14 +1,24 @@
-import { Label } from "./index.js";
+import { Button, Label } from "./index.js";
 import { useForm } from "react-hook-form";
+import Input from "./Inputs/Input.jsx";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import Icon from "./Icon.jsx";
+import shapeByPurpose from "./Inputs/shapeByPurpose.jsx";
 
 const SendUs = () => {
   const {
-    register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+    control,
+    formState: { isValid, errors },
+  } = useForm({
+    mode: "onBlur",
+  });
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  console.log(errors, isValid);
 
   return (
     <div className="h-[1050px] w-full">
@@ -19,40 +29,59 @@ const SendUs = () => {
 
         <div className="send-us__container">
           <div className="send-us__container__form">
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <input
-                type="text"
-                placeholder="Tabela İsmi"
-                {...register("Tabela İsmi", { min: 3 })}
-              />
-              <input
-                type="email"
-                placeholder="E-Posta"
-                {...register("E-Posta", { required: true })}
-              />
-              <input
-                type="text"
-                placeholder="Yetkili Ad - Soyad"
-                {...register("Yetkili Ad - Soyad", { required: true, min: 3 })}
-              />
-              <input
-                type="tel"
-                placeholder="Yetkili Cep Telefonu"
-                {...register("Yetkili Cep Telefonu", { required: true })}
-              />
-              <input
-                type="text"
-                placeholder="sokak no"
-                {...register("sokak no", {})}
-              />
-              <input
-                type="text"
-                placeholder="bina no"
-                {...register("bina no", {})}
-              />
+            <div
+              className="flex flex-col gap-4"
+              onSubmit={handleSubmit(onSubmit)}
+            >
+              <div className="flex gap-2">
+                <Input control={control} purpose="tableName" />
+                <Input control={control} purpose="email" />
+              </div>
 
-              <input type="submit" />
-            </form>
+              <div className="flex gap-2">
+                <Input control={control} purpose="name" />
+                <Input control={control} purpose="phone" mask="### ### ## ##" />
+              </div>
+
+              <Input control={control} purpose="street" />
+
+              <Input control={control} purpose="building" />
+
+              <Label className="font-semibold text-neutral-700">
+                Seçilen Menü Fotoğrafları
+              </Label>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center justify-center w-24 h-20 border-gray-300 border-2 border-dashed ">
+                  <Icon purpose="upload" />
+                </div>
+                <div className="flex items-center justify-center w-24 h-20 border-gray-300 border-2 border-dashed ">
+                  <Icon purpose="upload" />
+                </div>
+                <div className="flex items-center justify-center w-24 h-20 border-gray-300 border-2 border-dashed ">
+                  <Icon purpose="upload" />
+                </div>
+                <div className="flex items-center justify-center w-24 h-20 border-gray-300 border-2 border-dashed ">
+                  <Icon purpose="upload" />
+                </div>
+              </div>
+
+              <div className="text-xs text-gray-400 max-w-[95%]">
+                Paketus Üye İşyeri Sözleşmesi e-posta adresinize
+                gönderilecektir. Cep telefonu numaranızı onayladıktan sonraki
+                tüm işlemlerinizde gerekli bilgilendirme ve onayları bu numara
+                üzerinden gerçekleştireceğiz. Bir adres üzerinde en fazla iki
+                <strong>"Tabela İsmi"</strong> için başvuru yapabilirsiniz.
+              </div>
+
+              <Button
+                purpose="orange"
+                onClick={handleSubmit(onSubmit)}
+                disabled={!isValid}
+              >
+                Gonder
+              </Button>
+            </div>
           </div>
         </div>
       </div>
