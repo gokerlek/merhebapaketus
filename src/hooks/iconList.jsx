@@ -9,17 +9,17 @@ import { ReactComponent as Point } from "../assets/icons/wyh-paketus/Point.svg";
 import { ReactComponent as Rating } from "../assets/icons/wyh-paketus/Rating.svg";
 import { ReactComponent as TakeControl } from "../assets/icons/wyh-paketus/TakeControl.svg";
 import { ReactComponent as Touch } from "../assets/icons/wyh-paketus/Touch.svg";
-import { ReactComponent as Image2 } from "../assets/icons/Image2.svg";
+import { ReactComponent as Image } from "../assets/icons/Image.svg";
+
 const iconList = (purpose, { width, height, color }) => {
   switch (purpose) {
     case "logo":
       return <Logo />;
     case "app-store":
       return <AppStore />;
-    case "play-store":
-      return <PlayStore />;
+
     case "upload":
-      return <Image2 />;
+      return <Image />;
 
     // Why Paketus
     case "good-one-win":
