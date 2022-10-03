@@ -1,7 +1,10 @@
+import { Container } from "./index.js";
+
 const FirstThreeMonths = () => {
   return (
-    <div id="why-paketus">
+    <Container medium>
       <img
+        id="why-paketus"
         src="/images/icon-community/Group-125.png"
         loading="lazy"
         sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, 97vw"
@@ -28,7 +31,7 @@ const FirstThreeMonths = () => {
         Üyelikten itibaren ilk <span className="text-secondary">3 ay</span> iş
         yerlerine komisyon yok!
       </div>
-    </div>
+    </Container>
   );
 };
 
