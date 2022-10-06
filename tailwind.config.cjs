@@ -23,6 +23,9 @@ module.exports = {
         background:
             "linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0.88%, rgba(0, 0, 0, 0.6) 175.77%), url('/public/images/kebab.jpg')",
       },
+      fontFamily: {
+        body: ["Manrope", 'sans-serif'],
+      }
 
     },
   },
