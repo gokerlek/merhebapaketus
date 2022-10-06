@@ -40,8 +40,9 @@ const Welcome = () => {
                 href="https://apps.apple.com/tr/app/paketus/id1459438549?l=tr"
                 target={"_blank"}
                 rel={"noreferrer, noopener"}
+                className="w-[120px] transform transition duration-300 ease-in-out hover:scale-105"
               >
-                <Icon purpose="app-store" width={120} />
+                <Icon purpose="app-store" width={"100%"} />
               </a>
 
               <a
@@ -50,7 +51,7 @@ const Welcome = () => {
                 rel={"noreferrer, noopener"}
               >
                 <img
-                  className="w-[130px] h-[45px]"
+                  className="w-[130px] h-[45px] transform transition duration-300 ease-in-out hover:scale-105"
                   alt="Google Play'den alın"
                   src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png"
                 />

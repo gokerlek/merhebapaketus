@@ -33,6 +33,7 @@ const Button = ({
   const containerClassName = {
     orange: clsx(
       "bg-secondary hover:bg-secondarySoft rounded px-8 py-3 text-white font-bold cursor-pointer text-center",
+      "transform transition duration-300 ease-in-out hover:scale-105",
       {
         "opacity-50 cursor-not-allowed hover:": disabled,
       }

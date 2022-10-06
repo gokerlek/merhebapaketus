@@ -1,4 +1,5 @@
 import { Container, Icon, Label } from "./index.js";
+import { SiFacebook, SiInstagram, SiTwitter } from "react-icons/all.js";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
           </div>
 
           <div className="flex w-full justify-between max-w-[800px] gap-8 ">
-            <div className="w-full border-r-[1px] border-[#5a5a5a]">
+            <div className="w-full border-r-[1px] border-gray-600">
               <Label className="text-white text-sm font-light  mb-2">
                 Paketus Elektronik İletişim Gıda Lojistik AŞ
               </Label>
@@ -46,20 +47,20 @@ const Footer = () => {
                     src="/images/appleWhite.png"
                     width="130"
                     alt="app store button"
-                    className="image-31"
+                    className="hover:scale-105 transform transition duration-300 ease-in-out"
                   />
                 </a>
 
                 <a
                   href="https://play.google.com/store/apps/details?id=com.paketus&amp;hl=tr"
                   target="_blank"
-                  className="w-inline-block"
+                  className="cursor-pointer"
                 >
                   <img
                     src="/images/googleWhite.png"
                     width="130"
                     alt="Play store button"
-                    className="image-13"
+                    className="hover:scale-105 transform transition duration-300 ease-in-out"
                   />
                 </a>
               </div>
@@ -67,9 +68,68 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-      <div className="shadow-inner w-full h-60 bg-white">
-        <Container></Container>
-      </div>
+      <Container medium>
+        <div className="border-t border-gray-600 py-8 w-full flex">
+          <div className="flex flex-1 justify-start gap-10">
+            <div className="flex flex-col gap-2">
+              <div className="text-white text-sm font-light hover:transform hover:scale-105 cursor-pointer transform transition duration-300 ease-in-out">
+                ParaPuan Nedir?
+              </div>
+
+              <div className="text-white text-sm font-light hover:transform hover:scale-105 cursor-pointer transform transition duration-300 ease-in-out ">
+                Restoran Puan Sistemi
+              </div>
+
+              <div className="text-white text-sm font-light hover:transform hover:scale-105 cursor-pointer transform transition duration-300 ease-in-out">
+                Restoranınız mı var?
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="text-white text-sm font-light hover:transform hover:scale-105 cursor-pointer transform transition duration-300 ease-in-out">
+                Kullanıcı Sözleşmesi
+              </div>
+
+              <div className="text-white text-sm font-light hover:transform hover:scale-105 cursor-pointer transform transition duration-300 ease-in-out">
+                Gizlilik Politikası
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-1 justify-end gap-6 ">
+            <div className="flex flex-col gap-2">
+              <div className="text-white text-sm">Bizi Takip Et!</div>
+
+              <div className="text-white text-sm ">
+                Kampanya ve yeniliklerden haberdar ol.
+              </div>
+
+              <div className="flex gap-6 my-4">
+                <a className="w-8 text-white hover:text-secondary cursor-pointer hover:scale-110 transform transition duration-300 ease-in-out">
+                  <SiFacebook size="100%" />
+                </a>
+
+                <a className=" w-8 text-white hover:text-secondary cursor-pointer hover:scale-110 transform transition duration-300 ease-in-out ">
+                  <SiInstagram size="100%" />
+                </a>
+
+                <a className=" w-8 text-white hover:text-secondary cursor-pointer hover:scale-110 transform transition duration-300 ease-in-out ">
+                  <SiTwitter size="100%" />
+                </a>
+              </div>
+            </div>
+
+            <div className="min-w-[80px] min-h-[80px] h-full flex items-end">
+              <img
+                className="min-w-[80px] min-h-[80px]"
+                width={80}
+                height={80}
+                src={"/images/sertifika.png"}
+              />
+            </div>
+          </div>
+        </div>
+      </Container>
     </div>
   );
 };
