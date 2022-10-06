@@ -1,4 +1,9 @@
-import { Welcome, WhyPaketus, FirstThreeMonths } from "../components/index.js";
+import {
+  Welcome,
+  WhyPaketus,
+  FirstThreeMonths,
+  Support,
+} from "../components/index.js";
 
 const Home = () => {
   return (
@@ -6,6 +11,7 @@ const Home = () => {
       <Welcome />
       <FirstThreeMonths />
       <WhyPaketus />
+      <Support />
     </div>
   );
 };

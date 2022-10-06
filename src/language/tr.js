@@ -53,9 +53,10 @@ const tr = {
   "Gelişmiş yönetim panelin ile avantajlı menüler yaratabilir ürünlerini ve fiyatlarını hızlıca güncelleyebilir işinin kontrolünü eline alırsın":
     "Gelişmiş yönetim panelin ile avantajlı menüler yaratabilir, ürünlerini ve fiyatlarını hızlıca güncelleyebilir, işinin kontrolünü eline alırsın.",
   "Destek için buradayız": "Destek için buradayız!",
-  "Ayrıntılı bilgi için 0850 305 44 94": "Ayrıntılı bilgi için: 0850 305 44 94",
-  "WhatsApp Üye İşyeri Danışma Hattı 90 531 727 87 82":
-    "WhatsApp Üye İşyeri Danışma Hattı: +90 531 727 87 82",
+  "Ayrıntılı bilgi için": "Ayrıntılı bilgi için:",
+  "0850 305 44 94": " 0850 305 44 94",
+  "WhatsApp Üye İşyeri Danışma Hattı": "WhatsApp Üye İşyeri Danışma Hattı: ",
+  "90 531 727 87 82": "+90 531 727 87 82",
   destekpaketuscom: "destek@paketus.com",
   "Uygulama ve web sitemizi deneyimlemek için kullanıcı adı ve şifreniz cep telefonunuza gönderilecektir":
     "Uygulama ve web sitemizi deneyimlemek için kullanıcı adı ve şifreniz cep telefonunuza gönderilecektir.",

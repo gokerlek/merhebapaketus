@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       screens: {
         bigTablet: { max: "1200px", min: "1001px" },
+        other: { max: "900px", min: "0px" },
         mediumTablet: { max: "1000px", min: "769px" },
         tablet: { max: "768px", min: "480px" },
         phone: { max: "479px", min: "0px" },
