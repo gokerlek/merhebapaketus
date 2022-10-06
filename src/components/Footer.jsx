@@ -67,6 +67,9 @@ const Footer = () => {
           </div>
         </div>
       </Container>
+      <div className="shadow-inner w-full h-60 bg-white">
+        <Container></Container>
+      </div>
     </div>
   );
 };
