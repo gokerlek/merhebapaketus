@@ -10,6 +10,7 @@ import { ReactComponent as TakeControl } from "../assets/icons/wyh-paketus/TakeC
 import { ReactComponent as Touch } from "../assets/icons/wyh-paketus/Touch.svg";
 import { ReactComponent as Image } from "../assets/icons/Image.svg";
 import { ReactComponent as Shape } from "../assets/shape.svg";
+import { IoImageOutline } from "react-icons/all.js";
 import Logo from "../assets/Logo";
 import LogoWhite from "../assets/LogoWhite";
 
@@ -23,7 +24,7 @@ const iconList = (purpose, { width, height, color }) => {
       return <AppStore />;
 
     case "upload":
-      return <Image />;
+      return <IoImageOutline size={"100%"} color={"currentColor"} />;
 
     // Why Paketus
     case "good-one-win":

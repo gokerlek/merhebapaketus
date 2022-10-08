@@ -15,12 +15,13 @@ import { Label } from "../index.js";
 const Input = ({ purpose, control, mask }) => {
   const { name, title, placeholder, type, disabled } = useInputValue(purpose);
 
+  console.log(name, title, placeholder, type, disabled, purpose);
   const {
     field: { value, onChange },
     fieldState: { error },
   } = useController({
     control,
-    name: name,
+    name: purpose,
   });
 
   const {
@@ -47,7 +48,7 @@ const Input = ({ purpose, control, mask }) => {
           type={type}
           placeholder={placeholder}
           className={inputClassName}
-          value={value || ""}
+          value={value}
           onChange={onChange}
           disabled={disabled}
         />
@@ -57,7 +58,7 @@ const Input = ({ purpose, control, mask }) => {
         <PatternFormat
           placeholder={placeholder}
           className={inputClassName}
-          value={value ? value : ""}
+          value={value}
           onChange={onChange}
           disabled={disabled}
           format={mask}

@@ -3,7 +3,7 @@ import Icon from "./Icon.jsx";
 
 const Support = () => {
   return (
-    <div className="flex w-full h-fit relative items-end justify-start min-h-[300px] mt-40 phone:mt-20">
+    <div className="flex w-full h-fit relative items-end justify-start min-h-[300px] mt-40 other:mt-20  other:min-h-[350px]">
       <Icon purpose="shape" />
       <div className="absolute inset-0">
         <Container medium>
@@ -19,7 +19,7 @@ const Support = () => {
               className={`w-full max-w-[500px] h-auto other:hidden `}
             />
             <div className="flex flex-col items-end gap-2 other:items-center w-full mb-8">
-              <Label className="text-[32px] font-bold text-end mb-8">
+              <Label className="text-[32px] font-bold text-end other:text-center other:text-2xl mb-8">
                 Destek için buradayız
               </Label>
               <div className="flex other:flex-col">

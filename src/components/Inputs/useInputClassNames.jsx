@@ -10,7 +10,7 @@ const useInputHelpers = ({ purpose, type, error, title }) => {
     "transform transition duration-300 ease-in-out "
   );
 
-  const inputTileClassName = clsx("mb-2 font-semibold text-neutral-700 ", {
+  const inputTileClassName = clsx("mb-2 font-bold text-neutral-700 text-sm ", {
     "text-red": error,
   });
 
