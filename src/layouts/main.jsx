@@ -1,25 +1,15 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import * as React from "react";
+import { Header, Footer } from "../components/index.js";
 
 const Layout = () => {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">Aut</Link>
-          </li>
-
-          <li>
-            <Link to="/nothing-here">Nothing Here</Link>
-          </li>
-        </ul>
-      </nav>
+      <Header />
 
       <Outlet />
+
+      <Footer />
     </div>
   );
 };
